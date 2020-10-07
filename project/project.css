@@ -33,7 +33,7 @@ body {
 
 #menu ul li {
   display: inline-table;
-  width: 160px;
+  width: 200px;
   height: 40px;
   line-height: 50px;
   position: relative;
@@ -47,7 +47,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: 20px;
-  
 }
 
 #menu ul li a :hover {
@@ -58,10 +57,12 @@ body {
 #menu ul li > .sub-menu {
   display: none;
   position: absolute;
+  background-color: white;
+  width: 200px;
 }
 
 #menu ul li:hover .sub-menu {
-  display: block;
+  display:block
 }
 
 #menu ul li ul li a {
@@ -78,5 +79,10 @@ body {
 }
 
 #anh1{
-  height: 427px;
+  height: 421px;
+}
+
+#menu .sub-menu li{
+  border-bottom: thin solid black;
+  width: 230px;
 }

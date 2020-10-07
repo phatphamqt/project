@@ -4,10 +4,10 @@ async function getData(){
     const response = await fetch(url)
     data = await response.json()
     console.log(data)
-    // sp.insertAdjacentHTML('beforeend',`
-    // <img src="${data[0].image}">
+    sp.insertAdjacentHTML('beforeend',`
+    <img src="${data[0].image}">
     
-    // `)
+    `)
 }
 
 getData()
