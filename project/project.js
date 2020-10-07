@@ -4,10 +4,10 @@ async function getData(){
     const response = await fetch(url)
     data = await response.json()
     console.log(data)
-    sp.insertAdjacentHTML('beforeend',`
-    <img src="${data[0].image}">
+    // sp.insertAdjacentHTML('beforeend',`
+    // <img src="${data[0].image}">
     
-    `)
+    // `)
 }
 
 getData()
@@ -23,7 +23,6 @@ async function postproduct(product) {
     });
 }
 
-
 let product = {
     id : 1,
     image : "https://hondamotor.vn/upload/hinhanh/x-adv-750178c.jpg",
@@ -34,3 +33,4 @@ let product = {
 
 // postproduct(product)
 
+// Header
