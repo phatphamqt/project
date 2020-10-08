@@ -4,8 +4,39 @@
   box-sizing: border-box;
 }
 
+#dangnhap {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.btn_header {
+  width: 60px;
+  height: 40px;
+  border-radius: 10px ;
+  border: thin black
+}
+
+.btn_header:active {
+  background-color: greenyellow
+}
+
+#btn_sign_up {
+  margin-right: 10px;
+}
+
+#btn_sign_in {
+  margin-right: 10px;
+}
+
+#carts {
+  width:30px;
+}
+
 #menu {
-  margin-top: 30px;
+  margin-top: 10px;
+  max-width: 100%;
 }
 
 #menu .nav-menu {
@@ -73,16 +104,13 @@ body {
   background-color: white;
 }
 
-.img_header{
-  width: 50%;
-  float: left;
-}
-
-#anh1{
-  height: 421px;
-}
-
 #menu .sub-menu li{
   border-bottom: thin solid black;
   width: 230px;
 }
+
+#anhcover{
+  height: 400px;
+  max-width: 100%;;
+}
+
