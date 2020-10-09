@@ -6,7 +6,7 @@ async function getData(){
     console.log(data)
     sp.insertAdjacentHTML('beforeend',`
     <img src="${data[0].image}">
-    
+    <a href="./info.html?id=${product.id}">Show info</a>
     `)
 }
 
@@ -25,7 +25,6 @@ async function postproduct(product) {
 
 
 let product = {
-    id : 1,
     image : "https://hondamotor.vn/upload/hinhanh/x-adv-750178c.jpg",
     color : "black,white",
     price : 120500000,    
