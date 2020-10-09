@@ -7,7 +7,7 @@ async function getMember(){
     let btn_sign_in = document.getElementById("btn_sign_in")
     let btn_admin = document.getElementById("admin")
     btn_sign_in.addEventListener ('click', function(){
-    let username=prompt("nhap ten cua ban")
+    let username=prompt("Enter your name")
     for(let i = 0 ; i<mem.length ; i++){
         if(mem[i].name == username){
             console.log(1)
