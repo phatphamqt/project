@@ -118,12 +118,15 @@ function createContainer(user){
     btn.addEventListener('click',function(){
         let carts_input_value = Number(carts_input.value)
         carts_input_value += input
+        
         d += cc  // number
+       // x=0
         if(d>=0){
             x=0
         }
         else {
             x=1
+            d=0
         }
         if(x==0){
             d = d.toString()
