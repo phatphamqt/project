@@ -112,27 +112,37 @@ function createContainer(user){
     let d = 0
     let b = a.split('.')
     const c = Number(b.join("")) 
+    let x = 0
     
     function Createprice(btn,cc,input){
     btn.addEventListener('click',function(){
         let carts_input_value = Number(carts_input.value)
         carts_input_value += input
         d += cc  // number
-        d = d.toString()
-        d = d.split("")  // array
-        let ii = 1
-        for (let i = d.length - 1; i > 0; i--) {
-            if (ii % 3 == 0) {
-                d.splice(i, 0, ".")
-            }
-            ii += 1
+        if(d>=0){
+            x=0
         }
-        d = d.join("")  // string
-
-        document.getElementById("carts_input").value = carts_input_value
-        document.getElementById("total").textContent = d +" VNĐ"
-        d = d.split('.')  //array
-        d = Number(d.join(""))  
+        else {
+            x=1
+        }
+        if(x==0){
+            d = d.toString()
+            d = d.split("")  // array
+            let ii = 1
+            for (let i = d.length - 1; i > 0; i--) {
+                if (ii % 3 == 0) {
+                    d.splice(i, 0, ".")
+                }
+                ii += 1
+            }
+            d = d.join("")  // string
+    
+            document.getElementById("carts_input").value = carts_input_value
+            document.getElementById("total").textContent = d +" VNĐ"
+            d = d.split('.')  //array
+            d = Number(d.join(""))
+        }
+          
     })
 }
 
