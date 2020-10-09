@@ -1,8 +1,5 @@
 // Header
-let carts = document.getElementById("carts")
-carts.addEventListener('click',function(){
 
-})
 
 
 // content
@@ -18,12 +15,13 @@ async function getData(){
         <img class="picture" src="${data[i].colorr1}">
         <a class="info" href="./info.html?id=${data[i].id}">Show info</a>
         <p class="price">${data[i].price}</p>
-        </div>`)
+        </div>
+        <button id="buy"> <a class="carts" href="./carts.html?id=${data[i].id}">BUY</a></button>
+        `)
     }
 }
 
 getData()
-
 
 async function postproduct(product) {
     await fetch(url, {
@@ -34,17 +32,6 @@ async function postproduct(product) {
         }
     });
 }
-
-
-// let product = {
-//     image : "https://hondamotor.vn/upload/hinhanh/x-adv-750178c.jpg",
-//     color : "black,white",
-//     price : 120500000,    
-//     name : "Honda ADV"
-// }
-
-// postproduct(product)
-
 
 let post = document.getElementById("post")
 
@@ -144,5 +131,7 @@ post.addEventListener('click',function(){
         colorr5: color5,
         
     }
-    postproduct(product)
+    // postproduct(product)
 })
+
+let btn_buy = document.getElementById("btn_buy")

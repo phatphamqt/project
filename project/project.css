@@ -1,21 +1,27 @@
 *{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
+
+  /* header */
 #dangnhap {
   display: flex;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-right: 10px;
   margin-top: 10px;
+  width: 100%
 }
 
 .btn_header {
   width: 60px;
   height: 40px;
   border-radius: 10px ;
-  border: thin black
+  border: thin black;
+  outline: none;
+  cursor: pointer;
 }
 
 .btn_header:active {
@@ -26,23 +32,15 @@
   margin-right: 10px;
 }
 
-#btn_sign_in {
-  margin-right: 10px;
-}
-
-#carts {
-  width:30px;
-}
-
 #menu {
   margin-top: 10px;
-  max-width: 100%;
+  width: 100%
 }
 
 #menu .nav-menu {
     display: flex;
     justify-content: space-around;
-    height: 60px
+    height: 60px;
 }
 
 body {
@@ -56,7 +54,7 @@ body {
   max-height: 300px;
 }
 
-#menu ul {
+#menu .nav-menu {
   list-style-type: none;
   background: #cf2932;
   text-align: center;
@@ -89,7 +87,7 @@ body {
   display: none;
   position: absolute;
   background-color: white;
-  width: 200px;
+  width: 230px;
 }
 
 #menu ul li:hover .sub-menu {
@@ -110,7 +108,224 @@ body {
 }
 
 #anhcover{
-  height: 400px;
-  max-width: 100%;;
+  width: 100%;
 }
 
+#buy {
+  width: 60px;
+  height: 40px;
+  border-radius: 10px ;
+  border: thin black;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(216, 210, 210);
+  font-weight: bold;
+}
+
+#buy > a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+
+
+      /* footer */
+
+      #top{
+        flex-wrap: wrap;
+        padding-left: 150px;
+        /* padding-right: 290px; */
+        background-color: rgb(243, 240, 240);
+        height: 900px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    
+    #footer{
+        display: flex;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    
+    .bike li{
+        /* display: inline; */
+        /* align-items: flex; */
+        display: grid;
+        margin-right: 150px;
+    }
+    
+    .bike li a{
+        text-decoration: none;
+        margin: 5px 5px;
+        color: black;
+    }
+    
+    .bike li h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .socia li{
+        display: grid;
+        margin-right: 150px;
+    }
+    
+    .socia li a{
+        text-decoration: none;
+        margin: 5px 5px;
+        color: black;
+    }
+    
+    .socia li h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .cybe li{
+        display: grid;
+        margin-right: 150px;
+    }
+    
+    .cybe li a{
+        text-decoration: none;
+        margin: 5px 5px;
+        color: black;
+    }
+    
+    .cybe li h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .sports{
+        display: grid;
+        margin-right: 150px;
+    }
+    
+    .sports a{
+        text-decoration: none;
+        margin: 5px 5px;
+        color: black;
+        font-size: 20px;
+    }
+    
+    .times li{
+        display: grid;
+    }
+    
+    .times li a{
+        text-decoration: none;
+        margin: 5px 5px;
+        color: black;
+    }
+    
+    .times li h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #footer2{
+        display: flex;
+        margin-top: 80px;
+    }
+    
+    .hondavn li{
+        display: grid;
+        margin-right: 90px;
+        font-size: 25px;
+    }
+    
+    .hondavn li h5{
+        margin-bottom: 10px;
+    }
+    
+    .hondavn li h6{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .hondavn .icon{
+        width: 200px;
+    }
+    
+    .signin{
+        font-size: 15px;
+    }
+    
+    .signin li{
+        display: grid;
+    }
+    
+    .signin-form{
+        width: 450px;
+    }
+    
+    .form-controls{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .form-controls input{
+        padding: 16px;
+        padding-right: 175px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+    }
+    
+    
+    .btn-signin{
+        padding: 15px 35px;
+        background-color: #dc3545;
+        color: white;
+        border-radius: 2px;
+        margin-left: 225px;
+        border: 1px solid;
+    }
+    
+    .hotline{
+        font-size: 20px;
+    }
+    
+    #hot{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+    }
+    
+    #hot .sdt{
+        color: rgb(248, 44, 44);
+        font-size: 20px;
+    }
+    
+    .mail{
+        display: flex;
+    }
+    
+    .mail .mei{
+        color: rgb(218, 30, 30);
+    }
+    
+    #footer3{
+        margin-top: 80px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    .fin{
+        display: flex;
+    }
+    
+    .fin li{
+        display: flex;
+    }
+    
+    .fin li h5{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .fin li a{
+        color: rgb(236, 44, 44);
+    }

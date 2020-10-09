@@ -107,6 +107,7 @@ function createProduct(user) {
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
+        console.log(this.nextElementSibling)
         var panel = this.nextElementSibling;
             if (panel.style.display === "block") {
                 panel.style.display = "none";
@@ -115,6 +116,7 @@ function createProduct(user) {
             }
         });
         }
+
     for(let i=0;i<5;i++){
         colorpanel[i].addEventListener('click',function(){
             maincolor.src=colorpanel[i].src
