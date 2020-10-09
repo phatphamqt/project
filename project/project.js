@@ -15,8 +15,9 @@ async function getData(){
         <img class="picture" src="${data[i].colorr1}">
         <a class="info" href="./info.html?id=${data[i].id}">Show info</a>
         <p class="price">${data[i].price}</p>
-        </div>
         <button id="buy"> <a class="carts" href="./carts.html?id=${data[i].id}">BUY</a></button>
+        </div>
+        
         `)
     }
 }

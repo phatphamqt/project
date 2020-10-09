@@ -329,3 +329,32 @@ body {
     .fin li a{
         color: rgb(236, 44, 44);
     }
+
+    /* phat */
+    .products{
+      margin-left: 20px;
+      border: 1px ;
+      border-radius: 16px;
+      height: 300px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0px 2px 16px rgba(39,9,9,0.16);
+      margin-bottom: 20px;
+  }
+  .products > .picture {
+      
+      z-index: 1;
+      margin-top: 5px;
+      height: auto; 
+      width: auto; 
+      max-width: 300px; 
+      max-height: 200px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px;
+      
+  }
+  #sp {
+      display: flex;
+      flex-wrap: wrap;
+  }

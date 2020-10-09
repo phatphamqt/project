@@ -25,7 +25,8 @@ function createProduct(user) {
     const productInnerHtml = `
     <div id = "main">
     <img id="mainimg" src="${user.image}">
-    <p>${user.dacdiem1}<br>${user.dacdiem1inf}</p>
+    <p id ="text1">${user.dacdiem1}</p>
+    <p id ="text2">${user.dacdiem1inf}</p>
     </div>
     <div id ="info">
         <div id="name">${user.name}</div>
@@ -33,7 +34,8 @@ function createProduct(user) {
         <button class="accordion">THIẾT KÊ</button>
             <div class="panel">
             <img class="panelimg" src="${user.des1}" alt="des1">
-            <p>${user.des1inf}<br>${user.des1det}</p>
+            <p class ="textchange">${user.des1inf}
+            <br>${user.des1det}</p>
             <img class="panelimg" src="${user.des2}" alt="des2">
             <p>${user.des2inf}<br>${user.des2det}</p>
             </div>
@@ -77,15 +79,41 @@ function createProduct(user) {
         </table>
     </div>`;
     const colortableinnerHtml =`
-    <div id="bangmau">
         <h2>Bảng màu</h2>
         <hr width="100%" size="5px" color="red" align="center"/>
-        <img id="maincolor" src="${user.image}">
-        <img class="colorpanel" src="${user.colorr1}" alt="mau1">
-        <img class="colorpanel" src="${user.colorr2}" alt="mau2">
-        <img class="colorpanel" src="${user.colorr3}" alt="mau3">
-        <img class="colorpanel" src="${user.colorr4}" alt="mau4">
-        <img class="colorpanel" src="${user.colorr5}" alt="mau5">
+        <div class="slideshow-container">
+    
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="${user.colorr1}" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="${user.colorr2}" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="${user.colorr3}" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
     `
     
     cover.insertAdjacentHTML('beforeend',coverinnerHTML)
@@ -95,9 +123,7 @@ function createProduct(user) {
     var acc = document.getElementsByClassName("accordion");
     let mainimg = document.getElementById("mainimg");
     let panelimg = document.getElementsByClassName("panelimg");
-    let maincolor = document.getElementById("maincolor");
-    let colorpanel = document.getElementsByClassName("colorpanel");
-    console.log(colorpanel)
+
     for(let i=0;i<5;i++){
         panelimg[i].addEventListener('click',function(){
             mainimg.src=panelimg[i].src
@@ -107,7 +133,6 @@ function createProduct(user) {
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        console.log(this.nextElementSibling)
         var panel = this.nextElementSibling;
             if (panel.style.display === "block") {
                 panel.style.display = "none";
@@ -115,14 +140,37 @@ function createProduct(user) {
                 panel.style.display = "block";
             }
         });
-        }
-
-    for(let i=0;i<5;i++){
-        colorpanel[i].addEventListener('click',function(){
-            maincolor.src=colorpanel[i].src
-        })
-    }    
+        }    
 }
 
 getProductById(url_api, myParam);
 
+//
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
