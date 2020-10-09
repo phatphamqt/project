@@ -1,17 +1,175 @@
-html {
+html body {
     background-color: rgb(244, 247, 250);
+    font-family: 'Roboto', sans-serif;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ /* header */
+ #dangnhap {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 100%
+  }
+  
+  .btn_header {
+    width: 60px;
+    height: 40px;
+    border-radius: 10px ;
+    border: thin black;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .btn_header:active {
+    background-color: greenyellow
+  }
+  
+  #btn_sign_up {
+    margin-right: 10px;
+  }
+  
+  #admin{
+    display: none;
+  }
+  
+  #admin{
+    margin-right: 10px;
+  }
+  
+  #admin a {
+    text-decoration: none;
+  }
+
+  #menu {
+    margin-top: 10px;
+    width: 100%
+  }
+  
+  #menu .nav-menu {
+      display: flex;
+      justify-content: space-around;
+      height: 60px;
+  }
+  
+  body {
+    color: #333;
+  }
+  
+  .logotop {
+    width: 80%;
+    height: auto;
+    max-width: 300px; 
+    max-height: 300px;
+  }
+  
+  #menu .nav-menu {
+    list-style-type: none;
+    background: #cf2932;
+    text-align: center;
+  }
+  
+  #menu ul li {
+    display: inline-table;
+    width: 200px;
+    height: 40px;
+    line-height: 50px;
+    position: relative;
+    
+  }
+  
+  #menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  #menu ul li a :hover {
+    background:white;
+    color: #333;
+  }
+  
+  #menu ul li > .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 230px;
+  }
+  
+  #menu ul li:hover .sub-menu {
+    display:block
+  }
+  
+  #menu ul li ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 18px;
+    background-color: white;
+  }
+  
+  #menu .sub-menu li{
+    border-bottom: thin solid black;
+    width: 230px;
+  }
+
+
+
+
+    /* content */
+#cover {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}   
+
+#container{
+    display: flex;
+    justify-content: center;
+}  
+
+#checkout {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-left: 270px;
+} 
 
 .order {
+    display: flex;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: white;
     width: 60%;
     height: auto;
+    column-count: 2;
+}
+
+h2 {
+    margin-bottom: 10px;
 }
 
 .order ul {
     list-style-type: none;
+}
+
+.order ul .product {
+    color: #333;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#name {
+    color: red;
 }
 
 button {
@@ -27,18 +185,23 @@ button:active{
 }
 
 #carts_input {
-    width: 5%;
+    width: 10%;
 }
 
 .sum {
     background-color:  rgb(244, 247, 250);
-    width: 30%;
+    width: 60%;
     font-size: 20px;
     border-radius: 10px;
 }
 
-#total {
-    float: right;
+
+.column {
+    margin: 0 40px
+}
+
+.form-control {
+    margin: 20px;
 }
 
 #btn_check_out {
@@ -47,4 +210,201 @@ button:active{
     background: rgba(255, 0, 0, 0.849);
     color: white;
     font-size: 20px;
+}
+
+#btn_check_out a {
+    text-decoration: none;
+    color: white
+}
+
+/* footer */
+
+#top{
+  flex-wrap: wrap;
+
+  background-color: rgb(243, 240, 240);
+  height: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+#footer{
+  display: flex;
+  font-size: 17px;
+  justify-content: space-between;
+  margin: 20px 50px
+}
+
+.bike li{
+  display: grid;
+  margin-right: 150px;
+}
+
+.bike li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.bike li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.socia li{
+  display: grid;
+  margin-right: 150px;
+}
+
+.socia li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.socia li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cybe li{
+  display: grid;
+  margin-right: 150px;
+}
+
+.cybe li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.cybe li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.times li{
+  display: grid;
+}
+
+.times li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.times li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#footer2{
+  display: flex;
+  margin: 20px 50px;
+  justify-content: space-between;
+
+}
+
+.hondavn li{
+  display: grid;
+  margin-right: 40px;
+  font-size: 17px;
+}
+
+.hondavn li h5{
+  margin-bottom: 10px;
+}
+
+.hondavn li h6{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hondavn .icon{
+  width: 150px;
+}
+
+.signin{
+  font-size: 12px;
+}
+
+.signin li{
+  display: grid;
+}
+
+.signin-form{
+  width: 450px;
+}
+
+.form-controls{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-controls input{
+  padding: 12px;
+  padding-right: 150px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+
+.btn-signin{
+  padding: 12px 32px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 2px;
+  margin-left: 195px;
+  border: 1px solid;
+}
+
+.hotline{
+  font-size: 15px;
+}
+
+#hot{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+#hot .sdt{
+  color: rgb(248, 44, 44);
+  font-size: 20px;
+}
+
+.mail{
+  display: flex;
+}
+
+.mail .mei{
+  color: rgb(218, 30, 30);
+}
+
+#footer3{
+  display: flex;
+  margin-left: 50px ;
+  font-size: 17px;
+}
+
+
+
+.fin{
+  display: flex;
+}
+
+.fin li{
+  display: flex;
+  
+}
+
+.fin li h5{
+  margin-left: 7px;
+  margin-right: 7px;
+  border-left: 1px solid;
+  padding-left: 7px;
+}
+
+.fin li a{
+  color: rgb(236, 44, 44);
 }

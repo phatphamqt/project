@@ -7,11 +7,114 @@
     <link rel="stylesheet" href="carts.css">
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <div class="header">
+        <div id="dangnhap">
+            <button class="btn_header" id="admin"><a href="http://127.0.0.1:5500/admin.html">Admin</a></button>
+            <!-- <button class="btn_header" id="btn_sign_up">Sign Up</button> -->
+            <button class="btn_header" id="btn_sign_in">Sign In</button>
+        </div>
+        <div id="menu">
+            <ul class="nav-menu">
+                <li>
+                    <img class="logotop" src="./img/honda-the-power-of-dreams-logo.png" alt="logo honda">
+                </li>
+                
+                <li>
+                    <a href="">Giới thiệu</a>
+                    <ul class = "sub-menu">
+                        <li>
+                            <a href="">Giới thiệu Honda Việt Nam</a>
+                        </li>
+                        <li>
+                            <a href="">Lịch sử phát triển</a>
+                        </li>
+                        <li>
+                            <a href="">Triết lý Honda</a>
+                        </li>
+                        <li>
+                            <a href="">Tầm nhìn tương lai</a>
+                        </li>
+                    </ul>
+                </li>
+              
+                <li>
+                    <a href="">Xe máy</a>
+                    <ul class = "sub-menu">
+                        <li>
+                            <a href="">Sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="">Phụ tùng</a>
+                        </li>
+                        <li>
+                            <a href="">Bán hàng doanh nghiệp</a>
+                        </li>
+                        <li>
+                            <a href="">Cuộc thi Lái xe Sinh thái</a>
+                        </li>
+                        <li>
+                            <a href="">Tin tức</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="">Đóng góp xã hội</a>
+                </li>
+
+                <li>
+                    <a href="">Lái xe an toàn</a>
+                    <ul class = "sub-menu">
+                        <li>
+                            <a href="">Trung tâm đào tạo lái xe an toàn</a>
+                        </li>
+                        <li>
+                            <a href="">Hoạt động đào tạo</a>
+                        </li>
+                        <li>
+                            <a href="">Tin tức</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="">Tin tức</a>
+                    <ul class = "sub-menu">
+                        <li>
+                            <a href="">Tin tức chung</a>
+                        </li>
+                        <li>
+                            <a href="">Tin tức xe máy</a>
+                        </li>
+                        <li>
+                            <a href="">Doanh số bán hàng</a>
+                        </li>
+                        <li>
+                            <a href="">Khuyến mãi</a>
+                        </li>
+                        <li>
+                            <a href="">Đóng góp xã hội</a>
+                        </li>
+                        <li>
+                            <a href="">Lái xe an toàn</a>
+                        </li>
+                        <li>
+                            <a href="">Các tin khác</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <img id="anhcover" class="img_header" src="https://cdn.honda.com.vn/home-banner/July2020/oEwZUUWbSoFVfkjFiwZC.jpg" alt="ảnh header">
+    </div>
+
+    <div>
         <div id="cover">
 
         </div>
-    </header>
+    </div>
 
     <div id="container">
         <!-- <div class="order">
@@ -20,9 +123,9 @@
                 <li class="order_item">
                     <span>Product 1</span>
                     <span class="quantity">
-                        <button onclick="up(-1)">-</button>
+                        <button >-</button>
                         <input id="carts_input" type="number" value ="1">
-                        <button onclick="up(1)">+</button>
+                        <button >+</button>
                     </span>
     
                     <span class="price">
@@ -38,7 +141,110 @@
             <button id="btn_check_out">Check out</button>
         </div> -->
     </div>
+
+    <div id="checkout">
+        
+    </div>
+   
+    <!-- footer -->
+    <div id="top">
+        <div id="footer">
+            <div class="bike">
+                <li>
+                    <h5>XE MÁY</h5>
+                    <a href="#">Sản phẩm</a>
+                    <a href="#">Phụ tùng</a>
+                    <a href="#">Bán hàng Doanh nghiệp</a>
+                    <a href="#">Cuộc thi Lái xe Sinh thái</a>
+                    <a href="#">Tin tức</a>
+                </li>
+            </div>
+            <div class="socia">
+                <li>
+                    <h5><a href="#">Đóng góp xã hội</a></h5>
+                    <a href="#">Hỗ trợ môi trường</a>
+                    <a href="#">Hỗ trợ giáo dục</a>
+                    <a href="#">Hỗ trợ cộng đồng</a>
+                    <a href="#">Tin tức</a>
+                </li>
+            </div>
+            <div class="cybe">
+                <li>
+                    <h5>Lái xe an toàn</h5>
+                    <a href="#">Trung tâm đào tạo lái xe an toàn</a>
+                    <a href="#">Hoạt động đào tạo</a>
+                    <a href="#">Tin tức</a>
+                </li>
+            </div>
     
+            <div class="times">
+                <li>
+                    <h5>Tin tức</h5>
+                    <a href="#">Tin tức chung</a>
+                    <a href="#">Tin tức xe máy</a>
+                    <a href="#">Tin tức ô tô</a>
+                    <a href="#">Doanh số bán hàng</a>
+                    <a href="#">Khuyến mãi</a>
+                    <a href="#">Đóng góp Xã hội</a>
+                    <a href="#">Lái xe an toàn</a>
+                    <a href="#">MotorSports</a>
+                    <a href="#">Các tin khác</a>
+                </li>
+            </div>
+        </div>    
+        <div id="footer2">
+            <div class="hondavn">
+                <li>
+                    <h5>Công ty Honda Việt Nam</h5>
+                    <h6>Số GCNĐKDN: 2500150543</h6>
+                    <h6>Đăng ký lần đầu: Ngày 26/6/2008</h6>
+                    <h6>Đăng ký thay đổi lần thứ 10: Ngày 1/4/2019</h6>
+                    <h6>Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở Kế hoạch và Đầu tư Vĩnh Phúc</h6>
+                    <h6>Địa chỉ: Phường Phúc Thắng, Thành Phố Phúc Yên, Tỉnh Vĩnh Phúc, Việt Nam</h6>
+                    <a href="http://online.gov.vn/Home/WebDetails/62061">
+                        <img class="icon" src="https://www.honda.com.vn/images/logoSaleNoti.png">
+                    </a>
+                </li>
+            </div>
+            <class class="signin">
+                <li>
+                    <h3>ĐĂNG KÝ NHẬN TIN</h3>
+                </li>
+                    <form class="signin-form">
+                    <div class="form-all">
+                        <div class="form-controls">
+                            <input type="hoTen" id="hoTen" placeholder="Họ tên...">
+                        </div>
+                        <div class="form-controls">
+                            <input type="email" id="email" placeholder="Email...">
+                        </div>
+                        <div class="box">
+                            <button class="btn-signin">Đăng Ký</button>
+                        </div>
+                    </div>
+                </form>
+            </class>
+            <div class="hotline">
+                <h3>ĐƯỜNG DÂY NÓNG</h3>
+                <div id="hot">
+                    <h5>Hotline:<h2 class="sdt">1800 8001</h2>(Miễn phí cho tất cả thuê bao)</h5>
+                </div>
+                <div class="mail">
+                    <h5>Email: <h4 class="mei">cr@honda.com.vn</h4></h5>
+                </div>
+            </div>
+        </div>
+        <div id="footer3">
+            <div class="fin">
+                <h5>© 2019. Copyright by Honda VietNam</h5>
+                <li>
+                    <h5><a href="@">Terms and Conditions</a></h5>
+                    <h5><a href="@">Privacy Policy</a></h5>
+                    <h5><a href="@">Cookie Poilicy</a></h5>
+                </li>
+            </div>
+        </div>
+    </div>
     
     <script src="carts.js"></script>
 </body>

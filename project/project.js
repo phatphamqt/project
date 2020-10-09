@@ -1,4 +1,29 @@
 // Header
+const url_member = "https://5f794a3ee402340016f93000.mockapi.io/api/members"
+async function getMember(){
+    const response = await fetch(url_member)
+    mem = await response.json()
+    console.log(mem)
+    let btn_sign_in = document.getElementById("btn_sign_in")
+    let btn_admin = document.getElementById("admin")
+    btn_sign_in.addEventListener ('click', function(){
+    let username=prompt("nhap ten cua ban")
+    for(let i = 0 ; i<mem.length ; i++){
+        if(mem[i].name == username){
+            console.log(1)
+            btn_admin.style.display = "block";
+            break
+        }
+        else{console.log(2)}
+    }
+    // btn_admin.addEventListener('click', function(){
+        
+    // })
+})
+}
+
+getMember()
+
 
 
 
@@ -136,3 +161,4 @@ post.addEventListener('click',function(){
 })
 
 let btn_buy = document.getElementById("btn_buy")
+
