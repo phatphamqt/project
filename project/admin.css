@@ -318,3 +318,17 @@
   .fin li a{
     color: rgb(236, 44, 44);
   }
+
+
+  /* BUTTON */
+
+  .btn{
+    background-color: #f13123;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

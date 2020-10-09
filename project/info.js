@@ -51,7 +51,7 @@ function createProduct(user) {
     `;
     const productInnerHtml = `
     <div id="mainimg"> 
-    <img src="${user.image}">
+    <img id="mainimage" src="${user.image}">
     </div>
     <div id="text">
     <p id ="text1">${user.dacdiem1}</p>
@@ -156,32 +156,35 @@ function createProduct(user) {
     parameter.insertAdjacentHTML('beforeend',parameterHtml);
     colortable.insertAdjacentHTML('beforeend',colortableinnerHtml)
     var acc = document.getElementsByClassName("accordion");
-    let mainimg = document.getElementById("mainimg");
+    let mainimage = document.getElementById("mainimg");
     let panelimg = document.getElementsByClassName("panelimg");
     let text1= document.getElementById("text1")
     let text2= document.getElementById("text2")
     let textchange1= document.getElementsByClassName("textchange1")
     let textchange2= document.getElementsByClassName("textchange2")
     
-
-    for(let i=0;i<5;i++){
-        panelimg[i].addEventListener('click',function(){
-            mainimg.src=panelimg[i].src
-            text1.innerHTML =textchange1[i].innerHTML 
-            text2.innerHTML =textchange2[i].innerHTML
+    for(let j=0;j<5;j++){
+        panelimg[j].addEventListener('click',function(){
+          console.log(panelimg[j].src)
+          console.log(mainimg.src)
+            mainimage.src=panelimg[j].src
+            text1.innerHTML =textchange1[j].innerHTML 
+            text2.innerHTML =textchange2[j].innerHTML
         })
     }
 
-    for (i = 0; i < acc.length; i++) {
+    for (let i = 0; i < 3; i++) {
+      
         acc[i].addEventListener("click", function() {
+
         this.classList.toggle("active");
-        
-        var panel = this.nextElementSibling;
+          var panel = this.nextElementSibling;
+
             if (panel.style.display === "block") {
                 panel.style.display = "none";
             } else {
                 panel.style.display = "block";
-            }
+            }    
         });
         }
            
