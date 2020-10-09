@@ -1,6 +1,33 @@
+// Header
+const url_member = "https://5f794a3ee402340016f93000.mockapi.io/api/members"
+async function getMember(){
+    const response = await fetch(url_member)
+    mem = await response.json()
+    console.log(mem)
+    let btn_sign_in = document.getElementById("btn_sign_in")
+    let btn_admin = document.getElementById("admin")
+    btn_sign_in.addEventListener ('click', function(){
+    let username=prompt("Enter your name")
+    for(let i = 0 ; i<mem.length ; i++){
+        if(mem[i].name == username){
+            console.log(1)
+            btn_admin.style.display = "block";
+            break
+        }
+        else{console.log(2)}
+    }
+    // btn_admin.addEventListener('click', function(){
+        
+    // })
+})
+}
+getMember()
+
+// content
 const url_api = "https://5f771bd2d5c9cb0016236aca.mockapi.io/api/user";
 const cover = document.getElementById('cover');
 const container = document.getElementById('container');
+const checkout = document.getElementById('checkout');
 
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('id');
@@ -11,6 +38,7 @@ async function getProductById(url_api, id) {
     // console.log(user);
     createImage(user);
     createContainer(user)
+    createCheckout(user)
 }
 
 getProductById(url_api, myParam);
@@ -26,28 +54,50 @@ function createImage(user){
 function createContainer(user){
     const containerinnerHTML = `
     <div class="order">
+        <div class="column">
             <h2>Your order from HonDa Shop:</h2>
+
             <ul class="order_items">
                 <li id="order_item">
-                    <span>${user.name}</span>
-                    <div id="price" >Price: ${user.price}</div>
-
+                    <span class="product" id="name" >${user.name}</span>
+                    <div class="product" id="price" >Price: ${user.price}</div>
                     <span class="quantity">
                         <button id="btn_down">-</button>
                         <input id="carts_input" type="number" value ="0">
                         <button id="btn_up"">+</button>
                     </span>
-    
-                    
                 </li>
             </ul>
-   
+
             <div class="sum">
                 <p style="font-size:25px">TOTAL: <span id="total">0 VNĐ</span></p>
             </div>
-    
-            <button id="btn_check_out">Check out</button>
+
         </div>
+            
+        <div class="column">
+            <h2>Your info:</h2>
+            <div class="form">
+                
+                <div class="form-control" >
+                    <label for="name">Your Name: </label>
+                    <input class="inputform" type="text" id="name" placeholder="Phan Minh Khoa">
+                </div>
+                <div class="form-control" >
+                    <label for="phone">Your Phone: </label>
+                    <input class="inputform" type="text" id="phone" placeholder="0903333456">
+                </div>
+                <div class="form-control" >
+                    <label for="address">Your Address: </label>
+                    <input class="inputform" type="text" id="address" placeholder="253 Điện Biên Phủ">
+                </div>
+
+            </div>
+        </div>
+    
+    </div>
+
+        
     `;
     container.insertAdjacentHTML('beforeend',containerinnerHTML)
 
@@ -88,11 +138,20 @@ function createContainer(user){
 
 Createprice(btn_up,c,1)
 Createprice(btn_down,-c,-1)    
-
-
 }
 
 
+function createCheckout (){
+    const checkoutinnerHTML = `
+    <button id="btn_check_out"><a href="project.html">Check out</a></button>
+    `;
+    checkout.insertAdjacentHTML('beforeend',checkoutinnerHTML)
 
+    let btn_check_out = document.getElementById("btn_check_out")
 
+    btn_check_out.addEventListener('click',function(){
+    alert("Congratulations on your successful order, your order will be shipped as soon as possible")
+    
+})
+}
 

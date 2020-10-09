@@ -1,5 +1,5 @@
 *{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -26,6 +26,22 @@
 
 #btn_sign_up {
   margin-right: 10px;
+}
+
+#admin {
+  margin-right: 10px;
+}
+
+#admin{
+  display: none;
+}
+
+#admin{
+  margin-right: 10px;
+}
+
+#admin a {
+  text-decoration: none;
 }
 
 #menu {
@@ -103,7 +119,7 @@
     width: 230px;
   }
 
-#container > #mainimg {
+  #container > #mainimg {
     max-width: 600px; 
     max-height: 600px;
     background: #ffffff;
@@ -125,25 +141,21 @@
 #main > #mainside {
   width: 30%;
 }
-
 #name{
     color: rgb(255, 55, 55);
     font-size: xx-large;
     font-weight: bold;
 }
-
 #price{
     font-size: x-large;
     font-weight: bold;
 }
-
 #cover > img{
     width: 100%;
     height: 390px;
     object-fit: cover;
     margin-bottom: 30px;
 }
-
 .accordion {
     background-color: #eee;
     color: #444;
@@ -158,7 +170,7 @@
   }
   
   .active, .accordion:hover {
-    background-color: #ccc; 
+    background-color: rgb(182, 181, 181); 
   }
   
   .panel {
@@ -166,7 +178,6 @@
     background-color: white;
     overflow: hidden;
   }
-  
 .panelimg{
     max-width: 200px;
     max-height: 200px;   
@@ -175,19 +186,15 @@
 h2{
     margin-left: 74.5px;
 }
-
 table th, td {   
     border-collapse: collapse;
 }
-
 table tr:nth-child(even) {  
     background-color: rgb(177, 166, 166);  
 }  
-
 table tr:nth-child(odd) {  
     background-color: #fff;  
 }  
-
 table{
     background-color: rgb(214, 212, 212);
     width: 1200px;
@@ -196,34 +203,29 @@ table{
     margin-right: auto;
     padding: 30px 70px;
 }
-
 th, td{
     padding: 10px 50px;
 }
-
 .colorpanel{
     max-width: 200px;
     max-height: 200px;   
 }
-
 #maincolor{
     max-width: 500px;
     max-height: 500px;
 }
 
-.textchange1, .textchange2{
-  display: none;
-}
-
-
-.mySlides {display: none}
-img {vertical-align: middle;}
-
+/*  */
 /* Slideshow container */
 .slideshow-container {
-  max-width: 600px;
+  max-width: 500px;
   position: relative;
   margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
 /* Next & previous buttons */
@@ -232,8 +234,8 @@ img {vertical-align: middle;}
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
   margin-top: -22px;
+  padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -299,16 +301,204 @@ img {vertical-align: middle;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+
+/* footer */
+
+#top{
+  flex-wrap: wrap;
+
+  background-color: rgb(243, 240, 240);
+  height: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+#footer{
+  display: flex;
+  font-size: 17px;
+  justify-content: space-between;
+  margin: 20px 50px
+}
+
+.bike li{
+  display: grid;
+  margin-right: 150px;
+}
+
+.bike li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.bike li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.socia li{
+  display: grid;
+  margin-right: 150px;
+}
+
+.socia li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.socia li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cybe li{
+  display: grid;
+  margin-right: 150px;
+}
+
+.cybe li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.cybe li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.times li{
+  display: grid;
+}
+
+.times li a{
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+}
+
+.times li h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#footer2{
+  display: flex;
+  margin: 20px 50px;
+  justify-content: space-between;
+
+}
+
+.hondavn li{
+  display: grid;
+  margin-right: 40px;
+  font-size: 17px;
+}
+
+.hondavn li h5{
+  margin-bottom: 10px;
+}
+
+.hondavn li h6{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hondavn .icon{
+  width: 150px;
+}
+
+.signin{
+  font-size: 12px;
+}
+
+.signin li{
+  display: grid;
+}
+
+.signin-form{
+  width: 450px;
+}
+
+.form-controls{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-controls input{
+  padding: 12px;
+  padding-right: 150px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+
+.btn-signin{
+  padding: 12px 32px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 2px;
+  margin-left: 195px;
+  border: 1px solid;
+}
+
+.hotline{
+  font-size: 15px;
+}
+
+#hot{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* display: flex; */
+}
+
+#hot .sdt{
+  color: rgb(248, 44, 44);
+  font-size: 20px;
+}
+
+.mail{
+  display: flex;
+}
+
+.mail .mei{
+  color: rgb(218, 30, 30);
+}
+
+#footer3{
+  display: flex;
+  margin-left: 50px ;
+  font-size: 17px;
+}
+
+
+
+.fin{
+  display: flex;
+}
+
+.fin li{
+  display: flex;
+  
+}
+
+.fin li h5{
+  margin-left: 7px;
+  margin-right: 7px;
+  border-left: 1px solid;
+  padding-left: 7px;
+}
+
+.fin li a{
+  color: rgb(236, 44, 44);
 }
