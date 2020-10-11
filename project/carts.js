@@ -156,7 +156,7 @@ Createprice(btn_down,-c,-1)
 
 function createCheckout (){
     const checkoutinnerHTML = `
-    <button id="btn_check_out"><a href="project.html">Check out</a></button>
+    <button id="btn_check_out"><a href="http://127.0.0.1:5500/project/project/project.html">Check out</a></button>
     `;
     checkout.insertAdjacentHTML('beforeend',checkoutinnerHTML)
 
