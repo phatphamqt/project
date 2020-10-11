@@ -25,6 +25,7 @@ getMember()
 
 // content 
 const containerEl = document.getElementById('container');
+const mainside = document.getElementById('mainside');
 const cover = document.getElementById('cover');
 const parameter = document.getElementById('parameter')
 const colortable = document.getElementById('colortable')
@@ -49,33 +50,40 @@ function createProduct(user) {
     <img src="${user.cover}">
     `;
     const productInnerHtml = `
-    <div id = "main">
-    <img id="mainimg" src="${user.image}">
+    <div id="mainimg"> 
+    <img id="mainimage" src="${user.image}">
+    </div>
+    <div id="text">
     <p id ="text1">${user.dacdiem1}</p>
     <p id ="text2">${user.dacdiem1inf}</p>
-    </div>
+    </div>`
+    const mainsideInnerHtml=`
     <div id ="info">
         <div id="name">${user.name}</div>
         <div id="price">Giá từ:${user.price}</div>
         <button class="accordion">THIẾT KÊ</button>
             <div class="panel">
             <img class="panelimg" src="${user.des1}" alt="des1">
-            <p class ="textchange">${user.des1inf}
-            <br>${user.des1det}</p>
+            <p class ="textchange1">${user.des1inf}</p>
+            <p class ="textchange2">${user.des1det}</p>
             <img class="panelimg" src="${user.des2}" alt="des2">
-            <p>${user.des2inf}<br>${user.des2det}</p>
+            <p class ="textchange1">${user.des2inf}</p>
+            <p class ="textchange2">${user.des2det}</p>
             </div>
         <button class="accordion">ĐỘNG CƠ-CÔNG NGHỆ</button>
             <div class="panel">
             <img class="panelimg" src="${user.engine}" alt"engine">
-            <p>${user.engine1inf}<br>${user.engine1det}</p>
+            <p class ="textchange1">${user.engine1inf}</p>
+            <p class ="textchange2">${user.engine1det}</p>
             </div>
         <button class="accordion">TIỆN ÍCH-AN TOÀN</button>
             <div class="panel">
             <img class="panelimg" src="${user.benefit1}" alt="benefit1">
-            <p>${user.benefit1inf}<br>${user.benefit1det}</p>
+            <p class ="textchange1">${user.benefit1inf}</p>
+            <p class ="textchange2">${user.benefit1det}</p>
             <img class="panelimg" src="${user.benefit2}" alt="benefit2">
-            <p>${user.benefit2inf}<br>${user.benefit2det}</p>
+            <p class ="textchange1">${user.benefit2inf}</p>
+            <p class ="textchange2">${user.benefit2det}</p>
             </div>
     </div>`
     const parameterHtml=`
@@ -142,61 +150,76 @@ function createProduct(user) {
           </div>
     `
     
-    cover.insertAdjacentHTML('beforeend',coverinnerHTML)
+    cover.insertAdjacentHTML('beforeend',coverinnerHTML);
     containerEl.insertAdjacentHTML('beforeend',productInnerHtml);
+    mainside.insertAdjacentHTML('beforeend',mainsideInnerHtml);
     parameter.insertAdjacentHTML('beforeend',parameterHtml);
     colortable.insertAdjacentHTML('beforeend',colortableinnerHtml)
     var acc = document.getElementsByClassName("accordion");
-    let mainimg = document.getElementById("mainimg");
+    let mainimage = document.getElementById("mainimg");
     let panelimg = document.getElementsByClassName("panelimg");
-
-    for(let i=0;i<5;i++){
-        panelimg[i].addEventListener('click',function(){
-            mainimg.src=panelimg[i].src
+    let text1= document.getElementById("text1")
+    let text2= document.getElementById("text2")
+    let textchange1= document.getElementsByClassName("textchange1")
+    let textchange2= document.getElementsByClassName("textchange2")
+    
+    for(let j=0;j<5;j++){
+        panelimg[j].addEventListener('click',function(){
+          console.log(panelimg[j].src)
+          console.log(mainimg.src)
+            mainimage.src=panelimg[j].src
+            text1.innerHTML =textchange1[j].innerHTML 
+            text2.innerHTML =textchange2[j].innerHTML
         })
     }
 
-    for (i = 0; i < acc.length; i++) {
+    for (let i = 0; i < 3; i++) {
+      
         acc[i].addEventListener("click", function() {
+
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+          var panel = this.nextElementSibling;
+
             if (panel.style.display === "block") {
                 panel.style.display = "none";
             } else {
                 panel.style.display = "block";
-            }
+            }    
         });
-        }    
+        }
+           
 }
 
 getProductById(url_api, myParam);
 
-//
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+ //
+ var slideIndex = 1;
+ showSlides(slideIndex);
+ 
+ // Next/previous controls
+ function plusSlides(n) {
+   showSlides(slideIndex += n);
+ }
+ 
+ // Thumbnail image controls
+ function currentSlide(n) {
+   showSlides(slideIndex = n);
+ }
+ 
+ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
+  if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+      slides[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      // console.log(dot[i].className)
+      dots[i].className = dots[i].className.replace("active","");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += "active";
 }

@@ -34,6 +34,7 @@ async function getData(){
     const response = await fetch(url)
     data = await response.json()
     console.log(data)
+
     for(i=0;i<data.length;i++){
         sp.insertAdjacentHTML('beforeend',`
         <div class="products">
@@ -61,6 +62,8 @@ async function postproduct(product) {
 
 let post = document.getElementById("post")
 
+
+// postproduct(product)
 post.addEventListener('click',function(){
     let namep = prompt("Enter name of new product")
     let pricep = prompt("Enter price:")
@@ -108,7 +111,7 @@ post.addEventListener('click',function(){
     let color3=prompt("color3 url:")
     let color4=prompt("color4 url:")
     let color5=prompt("color5 url:")
-    let product = {
+        let product = {
         name: namep,
         price: pricep,
         color: colorp,
@@ -121,8 +124,8 @@ post.addEventListener('click',function(){
         des1inf: des11inf,
         des1det: des11det,
         des2: des22,
-        dacdiem2: des22inf,
-        dadiem2inf: des22det,
+        des2inf: des22inf,
+        des2det: des22det,
         engine: enginep,
         engine1inf: engine11inf,
         engine1det: engine11det,
@@ -155,9 +158,8 @@ post.addEventListener('click',function(){
         colorr3: color3,
         colorr4: color4,
         colorr5: color5,
-        
-    }
-    // postproduct(product)
+        }
+    postproduct(product)
 })
 
 let btn_buy = document.getElementById("btn_buy")

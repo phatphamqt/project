@@ -27,17 +27,7 @@ async function getData(){
     const response = await fetch(url)
     data = await response.json()
     console.log(data)
-    for(i=0;i<data.length;i++){
-        sp.insertAdjacentHTML('beforeend',`
-        <div class="products">
-        <img class="picture" src="${data[i].colorr1}">
-        <a class="info" href="./info.html?id=${data[i].id}">Show info</a>
-        <p class="price">${data[i].price}</p>
-        <button id="buy"> <a class="carts" href="./carts.html?id=${data[i].id}">BUY</a></button>
-        </div>
-        
-        `)
-    }
+    
 }
 
 getData()
@@ -114,8 +104,8 @@ post.addEventListener('click',function(){
         des1inf: des11inf,
         des1det: des11det,
         des2: des22,
-        dacdiem2: des22inf,
-        dadiem2inf: des22det,
+        des2inf: des22inf,
+        des2det: des22det,
         engine: enginep,
         engine1inf: engine11inf,
         engine1det: engine11det,
@@ -150,5 +140,32 @@ post.addEventListener('click',function(){
         colorr5: color5,
         
     }
-    // postproduct(product)
+    postproduct(product)
+})
+
+async function updateMember(id, data) {
+    const url_update = url + `/${id}`;
+    console.log('update member: ', url_update)
+    console.log(data)
+    await fetch(url_update, {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-type': 'application/json'
+        }
+    })
+}
+let deletep = document.getElementById("delete")
+
+async function deleteMember(id) {
+    const url_delete = url + `/${id}`;
+    console.log('update member: ', url_delete) // xem màn hình console nó ra gì là hiểu
+    await fetch(url_delete, {
+        method: 'DELETE'
+    })
+}
+
+deletep.addEventListener('click',function(){
+    let id=prompt(`Nhập ID sản phẩm muốn xóa: 1 đến ${data.length} `)
+    deleteMember(id)
 })

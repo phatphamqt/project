@@ -125,18 +125,21 @@
     background: #ffffff;
     border: 1px;
     box-shadow: 0px 2px 16px rgba(39,9,9,0.16);
-    margin: 20px 50px;
 }
 
-#container{
+#main{
     display: flex;
     margin-left: 50px;
     margin-right: 50px;
-    column-count: 2;
+    
 }
 
-#container > #mainimg {
-    width: 60%;
+#main > #container {
+  width: 70%;
+  padding-right: 20px;
+}
+#main > #mainside {
+  width: 30%;
 }
 #name{
     color: rgb(255, 55, 55);
@@ -157,17 +160,17 @@
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding: 10px;
+    width: 80%;
     border: none;
     text-align: left;
-    outline: none;
+    outline: gray;
     font-size: 15px;
     transition: 0.4s;
   }
   
   .active, .accordion:hover {
-    background-color: #ccc; 
+    background-color: rgb(182, 181, 181); 
   }
   
   .panel {
@@ -239,6 +242,7 @@ th, td{
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: gray;
 }
 
 /* Position the "next button" to the right */
@@ -497,4 +501,17 @@ th, td{
 
 .fin li a{
   color: rgb(236, 44, 44);
+}
+
+.textchange1, .textchange2{
+  display: none;
+}
+
+#text1{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#main{
+  margin-bottom: 30px;
 }
